@@ -1,0 +1,9 @@
+services:
+  Zend\Ldap\Ldap:
+    arguments:
+      $options:
+        host: '%env(LDAP_HOST)%'
+        port: '%env(LDAP_PORT)%'
+        baseDn: '%env(LDAP_BASE_DN)%'
+        username: '%env(LDAP_USERNAME)%'
+        password: '%env(LDAP_PASSWORD)%'

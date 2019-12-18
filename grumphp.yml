@@ -1,0 +1,15 @@
+parameters:
+    git_dir: .
+    bin_dir: vendor/bin
+    ascii:
+        failed: ~
+        succeeded: ~
+    tasks:
+        phplint:
+            triggered_by: ['php', 'inc', 'phtml', 'html']
+            ignore_patterns: ['tests/', 'migrations/', '/bin', '/config', '/public', '/storage', '/var']
+        phpcs:
+            triggered_by: ['php', 'inc', 'phtml', 'html']
+            ignore_patterns: ['tests/', 'migrations/', '/bin', '/config', '/public', '/storage', '/var']
+        codeception:
+            suite: 'unit'
