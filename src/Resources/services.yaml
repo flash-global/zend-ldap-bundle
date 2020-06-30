@@ -7,3 +7,5 @@ services:
         baseDn: '%env(LDAP_BASE_DN)%'
         username: '%env(LDAP_USERNAME)%'
         password: '%env(LDAP_PASSWORD)%'
+    tags:
+      - { name: 'kernel.event_listener', method: 'disconnect', event: 'kernel.terminate' }
