@@ -10,5 +10,6 @@
     'LDAP_BASE_DN'  => 'dc=example,dc=com',
     'LDAP_USERNAME' => 'toto',
     'LDAP_PASSWORD' => 'pa55w0rd',
+    'LDAP_RECONNECT_ATTEMPTS' => 0,
 ### 3. Add bundle to config/bundles.php
     ZendLdapBundle\ZendLdapBundle::class => ['all' => true],
