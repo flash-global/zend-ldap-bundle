@@ -10,6 +10,6 @@ services:
         baseDn: '%env(LDAP_BASE_DN)%'
         username: '%env(LDAP_USERNAME)%'
         password: '%env(LDAP_PASSWORD)%'
-        reconnectAttempts: '%env(LDAP_RECONNECT_ATTEMPTS)%'
+        reconnectAttempts: '%env(default:reconnect_attempts:int:LDAP_RECONNECT_ATTEMPTS)%'
     tags:
       - { name: 'kernel.event_listener', method: 'disconnect', event: 'kernel.terminate' }
